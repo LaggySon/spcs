@@ -1,0 +1,17 @@
+.ContactFrame {
+  text-align: center;
+  flex-basis: 15rem;
+  font-size: 0.9rem;
+  span {
+    font-size: 1.3rem;
+    color: aliceblue;
+    text-transform: uppercase;
+  }
+}
+.ContactsContainer {
+  display: flex;
+  flex-direction: row;
+  // flex-basis: 15rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}

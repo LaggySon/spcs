@@ -1,0 +1,111 @@
+.calcContainer {
+  align-items: stretch;
+
+  button,
+  select {
+    font: inherit;
+    color: inherit;
+    border-radius: var(--borderradius);
+    border: 2px solid transparent;
+    background-color: transparent;
+    option {
+      background-color: var(--bgcolor);
+      font: inherit;
+    }
+    cursor: pointer;
+    transition-duration: var(--transitionduration);
+    transition-property: all;
+    border: 2px solid var(--titlecolor);
+    border-radius: var(--borderradius);
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  select {
+    min-width: 7rem;
+  }
+  flex-direction: row;
+  overflow: hidden;
+  .playerList {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .player {
+      min-width: 20rem;
+      display: flex;
+      align-items: center;
+      .internalRank {
+        margin-left: 2rem;
+      }
+      gap: 0.25rem;
+      margin-block: 0.25rem;
+    }
+    .removeButton {
+      border-color: transparent !important;
+      &:hover {
+        color: var(--errorcolor);
+      }
+    }
+    .addButton {
+      padding: 0.25rem;
+    }
+  }
+
+  .info {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .qualifiedTiers {
+      display: flex;
+      flex-direction: column;
+    }
+    width: 10rem;
+    justify-content: center;
+    .calculatedRank {
+      padding: 0.5rem;
+      strong {
+        font-size: 1.3rem;
+      }
+    }
+    .isQualified {
+      text-transform: uppercase;
+    }
+    .qualifiedMessages {
+      display: flex;
+      flex-direction: column;
+      padding: 0.25rem;
+      list-style-position: inside;
+      .qualifiedMessage {
+        color: var(--errorcolor) !important;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+    }
+  }
+  .tierSelector {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 15rem !important;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .calcContainer {
+    & > * {
+      flex-grow: 1;
+    }
+  }
+  .tierSelector {
+    max-width: none !important;
+  }
+}

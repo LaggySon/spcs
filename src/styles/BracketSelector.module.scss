@@ -1,0 +1,70 @@
+.tierList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  text-align: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--textcolor);
+  border-image: linear-gradient(to left, transparent, white 50%, transparent) 1;
+  .tier {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    // background-color: rgba(0, 0, 0, 0.35);
+    border-radius: var(--borderradius);
+    &.active {
+      border: 2px solid var(--textcolor);
+      color: var(--accentcolor);
+    }
+    transition-property: all;
+    transition-duration: var(--transitionduration);
+    &:hover {
+      transform: scale(var(--scale));
+    }
+  }
+}
+.bracketList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  text-align: center;
+
+  .bracketName {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: var(--borderradius);
+
+    &.active {
+      border-radius: var(--borderradius);
+      border: 2px solid var(--textcolor);
+      color: var(--accentcolor);
+    }
+    transition-property: all;
+    transition-duration: var(--transitionduration);
+    &:hover {
+      transform: scale(var(--scale));
+    }
+  }
+}
+.bracketContainer {
+  width: 100%;
+}
+.bracketBox {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0;
+}
+.sep {
+  margin-block: auto;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .sep {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+.matchBox {
+  border: 2px solid var(--accentcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  max-width: 25rem;
+  padding: 0.5rem;
+  border-radius: var(--borderradius);
+  #tier {
+    font-size: 1.5rem;
+  }
+}
+
+.matchTeamBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  #vs {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.matchTeam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

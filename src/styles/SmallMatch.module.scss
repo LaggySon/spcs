@@ -1,0 +1,64 @@
+.matchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0.5rem;
+  max-width: 25rem;
+  text-decoration: none;
+  color: var(--textcolor);
+  transition-property: all;
+  transition-duration: 0.2s;
+
+  background-color: var(--bgcolor);
+  border: 2px solid var(--accentcolor);
+  border-radius: var(--borderradius);
+  box-shadow: var(--shadowsetting);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  #tier {
+    padding-inline: 0.5rem;
+  }
+}
+.matchBlock {
+  // background-color: var(--bgcolor);
+  border-bottom: 2px solid var(--accentcolor);
+  border-radius: var(--borderradius);
+  // box-shadow: var(--shadowsetting);
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  transition-property: all;
+  transition-duration: 0.2s;
+  // display: flex;
+  // align-items: center;
+  // gap: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.matchTeamBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  #vs {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.4rem;
+  }
+  // padding: 1rem;
+  padding-bottom: 0;
+}
+
+.matchTeam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-inline: auto;
+}

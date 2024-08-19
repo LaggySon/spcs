@@ -1,0 +1,103 @@
+:root {
+  font-family: "Kanit", sans-serif;
+
+  line-height: 1.2;
+  --speed: 500ms;
+  --accentcolor: #c73434;
+  --bgbase: 60, 60, 60;
+  --bgopacity: 1;
+  --bgcolor: rgba(var(--bgbase), var(--bgopacity));
+  // --bgcolor: #01273dbe;
+  // --textcolor: #cdd1d4;
+  --textcolor: white;
+  --titlecolor: #921e1e;
+  --errorcolor: rgb(212, 53, 53);
+  --shadowsetting: 3px 3px 3px black;
+  --borderradius: 0rem;
+  --dropshadow: drop-shadow(1px 1px 1px black);
+  --transitionduration: 200ms;
+  --scale: 1.05;
+
+  color: var(--textcolor);
+}
+body {
+  margin: 0;
+  background-color: rgb(34, 34, 34);
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 120vw;
+  height: 120vh;
+  z-index: -10;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transform: scale(1.02);
+  // filter: blur(5px);
+  // filter: contrast(150%);
+}
+
+.Separator {
+  display: flex;
+  width: 100%;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--textcolor);
+  padding-block: 1rem;
+  text-transform: uppercase;
+  justify-content: center;
+ 
+  & > * {
+    filter: drop-shadow(1px 1px 1px black);
+  }
+
+  span {
+    color: var(--accentcolor);
+  }
+  // &:before {
+  //   transform: translateY(50%);
+  //   margin-right: 1rem;
+  //   border-top: 0.2rem solid aliceblue;
+  //   content: " ";
+  //   flex-grow: 1;
+  // }
+  // &:after {
+  //   transform: translateY(50%);
+  //   margin-left: 1rem;
+  //   border-top: 0.2rem solid aliceblue;
+  //   content: " ";
+  //   flex-grow: 10;
+  // }
+}
+
+.blockel {
+  background-color: var(--bgcolor);
+  box-shadow: var(--shadowsetting);
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: var(--borderradius);
+  .big {
+    margin: 1rem auto;
+    max-width: 60rem;
+  }
+}
+
+.container {
+  margin: 1rem auto;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden !important;
+  a {
+    color: var(--textcolor);
+    text-decoration: underline;
+  }
+}

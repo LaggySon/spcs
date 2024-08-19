@@ -1,0 +1,98 @@
+.HofContainer {
+  text-align: center;
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: var(--textcolor);
+    font-weight: 500;
+    &.bg {
+      color: aliceblue;
+      font-weight: 600;
+    }
+  }
+  .Inductees,
+  .ChampTeam,
+  .AllStars {
+    background-color: var(--bgcolor);
+    border-radius: var(--borderradius);
+    box-shadow: var(--shadowsetting);
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .ChampTeam .Member,
+  .AllStars .Member {
+    border: 2px solid var(--titlecolor);
+    border-radius: var(--borderradius);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    &.Mvp {
+      border: 2px solid var(--accentcolor);
+      border-radius: var(--borderradius);
+    }
+  }
+  .Season {
+    width: 100%;
+
+    margin-block: 1rem;
+    h1 {
+      filter: var(--dropshadow);
+    }
+  }
+  .List {
+    text-align: center;
+    font-size: 1.2rem;
+    //   color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Member {
+    border: 2px solid var(--accentcolor);
+    border-radius: var(--borderradius);
+
+    padding: 0.2rem;
+    margin: 0.15rem;
+  }
+  .Box {
+    background-color: var(--bgcolor);
+  }
+  .SeasonList {
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--borderradius);
+    border-radius: var(--borderradius);
+
+    box-shadow: var(--shadowsetting);
+    // gap: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--bgcolor);
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    h3 {
+      padding: 0.2rem;
+    }
+    .Selector {
+      border-radius: var(--borderradius);
+      transition-property: all;
+      transition-duration: var(--transitionduration);
+
+      padding: 0.2rem 0.5rem;
+      &:hover {
+        transform: scale(var(--scale));
+        cursor: pointer;
+        border-bottom: 0.2rem solid var(--accentcolor);
+      }
+      &.active {
+        // outline: 2px solid var(--textcolor);
+        color: var(--accentcolor);
+        border-bottom: 0.2rem solid var(--accentcolor);
+      }
+    }
+  }
+}

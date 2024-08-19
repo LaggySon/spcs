@@ -1,0 +1,22 @@
+#matches {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  & > * {
+    flex-shrink: 0;
+  }
+  & > :first-child {
+    margin-left: auto;
+  }
+  & > :last-child {
+    margin-right: auto;
+  }
+
+  // background-color: var(--bgcolor);
+}
+
+@media screen and (max-width: 1024px) {
+  #matches {
+    padding-bottom: 1rem;
+  }
+}
