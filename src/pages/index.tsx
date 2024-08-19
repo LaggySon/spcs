@@ -90,8 +90,8 @@ export default function Calculator(props) {
 
     var resultString = `${getByValue(
       ranksMap,
-      Math.round(calculatedRank / srArray.length)
-    )} (${Math.round((calculatedRank / srArray.length) * 100) / 100})`;
+      Math.round(Number(calculatedRank) / srArray.length)
+    )} (${Math.round((Number(calculatedRank) / srArray.length) * 100) / 100})`;
     if (resultString.includes("undefined")) return "0";
     return resultString;
   };
@@ -105,7 +105,7 @@ export default function Calculator(props) {
     let messages = [];
     const srArray = getSrArray();
 
-    if (Math.round(calculatedSr) > tier.avgMax) {
+    if (Math.round(Number(calculatedSr)) > tier.avgMax) {
       qualified = false;
       messages.push("Team average SR is too high.");
     }
@@ -154,7 +154,7 @@ export default function Calculator(props) {
         <span className={styles.tierSelectHelp}>Select a tier</span>
         <select
           className={styles.tierSelect}
-          onChange={() => setSelectedTier(event.target.value)}
+          onChange={() => setSelectedTier((event.target as HTMLInputElement).value)}
         >
           <option value="Rookie">Rookie</option>
           <option value="Intermediate">Intermediate</option>
@@ -211,7 +211,7 @@ export default function Calculator(props) {
             <select
               key={rank + "Select"}
               id={styles.rankSelect}
-              onChange={() => selectPlayer(index, event.target.value)}
+              onChange={() => selectPlayer(index, (event.target as HTMLInputElement).value)}
               value={rank}
             >
               {/* generate dropdown options */}
